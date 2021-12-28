@@ -59,7 +59,7 @@ Este comando sube al Repo de Docker Hub la imagen. Una vez
 subida ya es publica y desde cualquier maquina con Docker podemos
 correr o ejecutar la app.
 
-12_
+
 
 
 # NOTAS
