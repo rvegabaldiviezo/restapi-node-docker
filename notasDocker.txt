@@ -44,6 +44,23 @@ para poder eliminar imagenes que estan refenciadas en estos contenedores.
 9_$ docker rmi <nameREPOSITORY>
 ELIMINA LA IMAGEN, xej: $ docker rmi ramonbaldiviezo671/node-restapi
 
+10_$ docker tag <nameImagen> <nameUserDockerHub>/<nameImagen>
+xej:  docker tag node-restapi ramonbaldiviezo671/node-restapi
+Crear una copia de la imagen pero en el formato usado en Docker Hub
+
+11_$ docker login
+Es para acceder a tu cuenta de Docker Hub. Este paso es necesario
+para acto seguido subir al repo la imagen.
+Username: ramonbaldiviezo671
+Password: ...
+
+12_$ docker push <nameUserDockerHub>/<nameImagen>
+Este comando sube al Repo de Docker Hub la imagen. Una vez
+subida ya es publica y desde cualquier maquina con Docker podemos
+correr o ejecutar la app.
+
+12_
+
 
 # NOTAS
 1-Crear una imagen del proyecto: es guardar nuestro proyeto con todos los requerimientos q
