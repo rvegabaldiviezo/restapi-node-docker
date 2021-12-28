@@ -1,0 +1,28 @@
+# COMANDOS
+
+1_$ gcloud info
+Permite ver info del usuario de gcloud. Esto nos mostrara la cuenta de Google que 
+estamos utilizando, asi como el proyecto de google que hemos seleccionado.
+
+2_$ sudo apt-get install kubectl
+Instalar kubectl
+
+3_$ kubectl get nodes
+Ver los nodos disponibles.
+
+ramon_baldiviezo@cloudshell:~ (os-desa-elasticintegracion)$ kubectl get nodes
+NAME                                                 STATUS   ROLES    AGE   VERSION
+gk3-integracion-cluster-default-pool-fdbecedf-wea9   Ready    <none>   48d   v1.20.10-gke.1600
+gk3-integracion-cluster-nap-1xq0c49k-5570f65c-qv0r   Ready    <none>   48d   v1.20.10-gke.1600
+
+
+
+4_$ kubectl describe node <NAME_NODO>
+Permite ver el estado de un Nodo
+ramon_baldiviezo@cloudshell:~ (os-desa-elasticintegracion)$ kubectl describe node gk3-integracion-cluster-default-pool-fdbecedf-wea9
+Name:               gk3-integracion-cluster-default-pool-fdbecedf-wea9
+
+
+
+# REFERENCIAS
+-https://www.youtube.com/watch?v=4B_EobzWotw 
