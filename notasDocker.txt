@@ -31,8 +31,18 @@ el conteiner.
 5_$ docker stop <CONTAINER_ID> 
 Este CONTAINER_ID lo podemos ver en los procesos activos, basta con los primeros tres caracteres 
 
+6_$ docker rm <CONTAINER_ID>
+Elimina definitivamente el contenedor
 
+7_$ docker stop $(docker ps -a -q)
+Para PARAR todos los contenedores docker.
 
+8_$ docker rm $(docker ps -a -q)
+Para ELIMINAR todos los contenedores docker. Este se usa como paso previo
+para poder eliminar imagenes que estan refenciadas en estos contenedores.
+
+9_$ docker rmi <nameREPOSITORY>
+ELIMINA LA IMAGEN, xej: $ docker rmi ramonbaldiviezo671/node-restapi
 
 
 # NOTAS
@@ -49,3 +59,12 @@ que necesita para poder correr/funcionar.
     # Los archivos de node nos dan las dependencias a nivel del proyecto o APLICACION, mientras 
     que Docker nos da las dependencias a nivel de SISTEMA, osea lo que necesita el sistema para 
     poder correr la aplicacion. 
+
+ramon@ramon-Latitude-E6420:~$ docker images
+}REPOSITORY                        TAG       IMAGE ID       CREATED        SIZE
+ramonbaldiviezo671/node-restapi   latest    01674a53ea5f   3 hours ago    920MB
+node                              12        fb17a1009e1c   6 days ago     918MB
+postgres                          latest    346c7820a8fb   3 months ago   315MB
+busybox                           latest    42b97d3c2ae9   4 months ago   1.24MB
+gcr.io/k8s-minikube/kicbase       v0.0.25   8768eddc4356   5 months ago   1.1GB
+hello-world                       latest    d1165f221234   9 months ago   13.3kB
