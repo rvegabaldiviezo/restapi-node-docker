@@ -1,5 +1,5 @@
 # restapi-node-docker
-Ejemplo básico del uso de docker y node. 
+Ejemplo básico del uso de docker y node. Ejemplo de Fazt Code: https://www.youtube.com/watch?v=iLlmm0L-VpQ   
 
 ![Ejemplo de como correr la app](runImagen.png)
 ---
