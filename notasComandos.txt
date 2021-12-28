@@ -1,0 +1,11 @@
+1_$ npm init -y
+crea un archivo llamado "package.json" de meta informacion del proyecto (nombre,descripcion), 
+pero lo mas importante es que lista las DEPENDENCIAS USADAS. En Docker cuando creemos o ejecutemos
+nuestra aplicacion en un CONTAINER, este archivo package.json sera necesario para que instale las
+dependencias de nuestro proyecto.
+
+2_$ npm i express
+Para instalar un Framework (llamado express) de Node para poder crear una REST API o un servidor.
+
+3_$ npm i morgan
+Modulo q nos permite ver por consola las peticiones http que van llegando

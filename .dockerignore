@@ -1,0 +1,4 @@
+#ARCHIVO PARA IGNORAR CIERTAS CARPETAS
+
+node_modules
+npm-debug.log

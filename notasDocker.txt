@@ -1,0 +1,51 @@
+# COMANDOS
+
+1_$ docker build -t <nameImagen> .
+Crea una IMAGEN Docker, le asigna ese nombre y copia todo los archivos.
+
+2_$ docker images
+Para ver las imagenes de docker instaladas.
+
+3_$ docker run <-d ó -it> -p <puertoContenedor:puertoApp> <nameImagen>
+Ejecuta la Imagen de Docker con ese nombre y que tengamos descargada.
+    ej: $ docker -d -p 4000:3000 run <nameImagen>
+
+Un detalle importante es en que puerto del conteiner de docker se va a 
+exponere la aplicacion (a su vez internamente la app si se ejecuta dentro
+del puerto 3000).
+
+    _$ docker -it -p 4000:3000 run <nameImagen>
+    Esta app se esta ejecutando en el puerto 3000 pero en este sistema le indicamos 
+    que queremos acceder atraves del puerto 4000 (parametro -p). El parametro -it es 
+    para indicarle que sea interactivo, es decir, que muestre por consola lo que 
+    va ejecuntado. 
+
+4_$ docker ds 
+Permite ver que procesos estan activos, es decir, que imagenes estan corriendo en 
+el conteiner.
+
+    $ docker ds -a 
+    Permite ver todos los procesos que se ejecutaron hasta el momento.
+
+
+5_$ docker stop <CONTAINER_ID> 
+Este CONTAINER_ID lo podemos ver en los procesos activos, basta con los primeros tres caracteres 
+
+
+
+
+
+# NOTAS
+1-Crear una imagen del proyecto: es guardar nuestro proyeto con todos los requerimientos q
+que necesita para poder correr/funcionar.
+
+    1.1 Crear el archivo Dockerfile, dentro de este archivo, especificamos que es lo que necesita
+    la aplicacion para poder funcionar. En nuestro ejemplo necesitamos:
+    -Instalar Node (para cada maquina donde corra)   
+
+    1.2 Docker Hub: Es como un Repositorio de contenedores (Imagenes), ahi buscamos los 
+    CONTAINER que necesitamos.   
+
+    # Los archivos de node nos dan las dependencias a nivel del proyecto o APLICACION, mientras 
+    que Docker nos da las dependencias a nivel de SISTEMA, osea lo que necesita el sistema para 
+    poder correr la aplicacion. 
